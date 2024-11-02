@@ -16,7 +16,7 @@ spec:
         app: auth-app
     spec:
       containers:
-        - image: dockeriz3d/gateway:gateway-0.0.1
+        - image: nginx:latest
           name: auth
           ports:
             - containerPort: 80
