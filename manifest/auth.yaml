@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: auth-app
+  name: auth-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: auth-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: auth-app
+    spec:
+      containers:
+        - image: dockeriz3d/auth:0.0.2
+          name: auth
+          ports:
+            - containerPort: 80
+          resources: {}
+status: {}
